@@ -12,6 +12,12 @@
 
 	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
     <dependency>
+        <groupId>com.datastax.cassandra</groupId>
+        <artifactId>cassandra-driver-parent</artifactId>
+        <version>3.1.1</version>
+    </dependency>
+    
+    <dependency>
         <groupId>org.ow2.asm</groupId>
         <artifactId>asm</artifactId>
         <version>5.0.3</version>
@@ -116,31 +122,31 @@
     <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-buffer</artifactId>
-        <version>4.0.37.Final</version>
+        <version>4.0.56.Final</version>
     </dependency>
 
     <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-codec</artifactId>
-        <version>4.0.37.Final</version>
+        <version>4.0.56.Final</version>
     </dependency>
 
     <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-common</artifactId>
-        <version>4.0.37.Final</version>
+        <version>4.0.56.Final</version>
     </dependency>
 
     <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-handler</artifactId>
-        <version>4.0.37.Final</version>
+        <version>4.0.56.Final</version>
     </dependency>
 
     <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-transport</artifactId>
-        <version>4.0.37.Final</version>
+        <version>4.0.56.Final</version>
     </dependency>
 
     <dependency>
