@@ -1,164 +1,319 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <groupId>com.my.example.test</groupId>
-    <artifactId>MyTestExample</artifactId>
-    <version>1.0.0</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+ 
+    <groupId>Cassandra</groupId>
+    <artifactId>CassandraJDBC${env.JDBC_V}</artifactId>
+    <version>${env.MAJOR_V}.${env.MINOR_V}.${env.REVISION_V}.${env.BUILD_V}</version>
     <packaging>jar</packaging>
-    <name>My Example</name>
-         
-<dependencies>
-
-	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-    <dependency>
-        <groupId>com.datastax.cassandra</groupId>
-        <artifactId>cassandra-driver-parent</artifactId>
-        <version>3.1.1</version>
-    </dependency>
+    <name>CassandraJDBC${env.JDBC_V}</name>
+    <url>http://maven.apache.org</url>
+  
+    <dependencies>
     
-    <dependency>
-        <groupId>org.ow2.asm</groupId>
-        <artifactId>asm</artifactId>
-        <version>5.0.3</version>
-    </dependency>
+        <dependency>
+            <groupId>sb_asm</groupId>
+            <artifactId>sb_asm</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_asm-analysis</groupId>
+            <artifactId>sb_asm-analysis</artifactId>
+            <version>5.0.3</version>
+        </dependency>      
+        <dependency>
+            <groupId>sb_asm-commons</groupId>
+            <artifactId>sb_asm-commons</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_asm-tree</groupId>
+            <artifactId>sb_asm-tree</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_asm-util</groupId>
+            <artifactId>sb_asm-util</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_cassandra-driver-core</groupId>
+            <artifactId>sb_cassandra-driver-core</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_cassandra-driver-extras</groupId>
+            <artifactId>sb_cassandra-driver-extras</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_cassandra-driver-mapping</groupId>
+            <artifactId>sb_cassandra-driver-mapping</artifactId>
+            <version>3.8.0</version>
+        </dependency>       
+        <dependency>
+            <groupId>sb_com.google.guava</groupId>
+            <artifactId>sb_guava</artifactId>
+            <!-- 19.0 for support of JDK 1.6: -->
+            <!-- 24.1.1-android for support of JDK 1.7: -->
+            <!-- 24.1.1-jre for support of JDK 1.8 -->
+            <version>[19.0],[24.1.1-android],[24.1.1-jre]</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_HdrHistogram</groupId>
+            <artifactId>sb_HdrHistogram</artifactId>
+            <version>2.1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jackson-annotations</groupId>
+            <artifactId>sb_jackson-annotations</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jackson-core</groupId>
+            <artifactId>sb_jackson-core</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jackson-databind</groupId>
+            <artifactId>sb_jackson-databind</artifactId>
+            <!-- version has to be >= 2.7.9.6 -->
+            <version>[2.7.9.6,)</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_javax.json-api</groupId>
+            <artifactId>sb_javax.json-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jffi</groupId>
+            <artifactId>sb_jffi</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jffi-native</groupId>
+            <artifactId>sb_jffi-native</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jnr-constants</groupId>
+            <artifactId>sb_jnr-constants</artifactId>
+            <version>0.9.9</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jnr-ffi</groupId>
+            <artifactId>sb_jnr-ffi</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jnr-posix</groupId>
+            <artifactId>sb_jnr-posix</artifactId>
+            <version>3.0.44</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_jnr-x86asm</groupId>
+            <artifactId>sb_jnr-x86asm</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_joda-time</groupId>
+            <artifactId>sb_joda-time</artifactId>
+            <version>2.9.9</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_lz4-java</groupId>
+            <artifactId>sb_lz4-java</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_metrics-core</groupId>
+            <artifactId>sb_metrics-core</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_netty-buffer</groupId>
+            <artifactId>sb_netty-buffer</artifactId>
+            <version>4.0.56.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_netty-codec</groupId>
+            <artifactId>sb_netty-codec</artifactId>
+            <version>4.0.56.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_netty-common</groupId>
+            <artifactId>sb_netty-common</artifactId>
+            <version>4.0.56.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_netty-handler</groupId>
+            <artifactId>sb_netty-handler</artifactId>
+            <version>4.0.56.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_netty-transport</groupId>
+            <artifactId>sb_netty-transport</artifactId>
+            <version>4.0.56.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_slf4j-api</groupId>
+            <artifactId>sb_slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_snappy-java</groupId>
+            <artifactId>sb_snappy-java</artifactId>
+            <version>1.1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>sb_CassandraJDBC</groupId>
+            <artifactId>sb_CassandraJDBC</artifactId>
+            <version>${env.MAJOR_V}.${env.MINOR_V}.${env.REVISION_V}.${env.BUILD_V}</version>
+        </dependency>
 
-    <dependency>
-        <groupId>org.ow2.asm</groupId>
-        <artifactId>asm-analysis</artifactId>
-        <version>5.0.3</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.ow2.asm</groupId>
-        <artifactId>asm-commons</artifactId>
-        <version>5.0.3</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.ow2.asm</groupId>
-        <artifactId>asm-tree</artifactId>
-        <version>5.0.3</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.ow2.asm</groupId>
-        <artifactId>asm-util</artifactId>
-        <version>5.0.3</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>16.0.1</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.hdrhistogram</groupId>
-        <artifactId>HdrHistogram</artifactId>
-        <version>2.1.9</version>
-    </dependency>
-
-    <dependency>
-        <groupId>javax.json</groupId>
-        <artifactId>javax.json-api</artifactId>
-        <version>1.0</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.github.jnr</groupId>
-        <artifactId>jffi</artifactId>
-        <version>1.2.10</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.github.jnr</groupId>
-        <artifactId>jffi</artifactId>
-        <version>1.2.10-native</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.github.jnr</groupId>
-        <artifactId>jnr-constants</artifactId>
-        <version>0.9.0</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.github.jnr</groupId>
-        <artifactId>jnr-ffi</artifactId>
-        <version>2.0.7</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.github.jnr</groupId>
-        <artifactId>jnr-posix</artifactId>
-        <version>3.0.27</version>
-    </dependency>
-
-    <dependency>
-        <groupId>com.github.jnr</groupId>
-        <artifactId>jnr-x86asm</artifactId>
-        <version>1.0.2</version>
-    </dependency>
-
-    <dependency>
-        <groupId>joda-time</groupId>
-        <artifactId>joda-time</artifactId>
-        <version>2.9.1</version>
-    </dependency>
-
-    <dependency>
-        <groupId>net.jpountz.lz4</groupId>
-        <artifactId>lz4</artifactId>
-        <version>1.3.0</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.dropwizard.metrics</groupId>
-        <artifactId>metrics-parent</artifactId>
-        <version>3.1.2</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-buffer</artifactId>
-        <version>4.0.56.Final</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-codec</artifactId>
-        <version>4.0.56.Final</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-common</artifactId>
-        <version>4.0.56.Final</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-handler</artifactId>
-        <version>4.0.56.Final</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-transport</artifactId>
-        <version>4.0.56.Final</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>1.7.7</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.xerial.snappy</groupId>
-        <artifactId>snappy-java</artifactId>
-        <version>1.1.2.6</version>
-    </dependency>
-</dependencies>
+    </dependencies>
+ 
+    <build>
+        <finalName>CassandraJDBC${env.JDBC_V}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                        
+                            <!-- Transformation -->
+                            <transformers>
+                                <transformer
+                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                </transformer>
+                            </transformers>
+                            
+                            <!-- Shade Thirdparty Libraries -->
+                            
+                            <relocations>
+                            
+                              <relocation>
+                                <pattern>org.objectweb</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.objectweb</shadedPattern>
+                              </relocation>
+                               <relocation>
+                                <pattern>com.datastax</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.datastax</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>com.google</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.google</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>org.HdrHistogram</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.HdrHistogram</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>com.fasterxml</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.fasterxml</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>javax.json</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.javax.json</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>jni</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.jni</shadedPattern>
+                              </relocation>
+                             <relocation>
+                                <pattern>com.kenai</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.kenai</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>jnr</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.jnr</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>org.joda</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.joda</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>darwin</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.darwin</shadedPattern>
+                              </relocation>
+                               <relocation>
+                                <pattern>linux</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.linux</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>net.jpountz</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.net.jpountz</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>win32</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.win32</shadedPattern>
+                              </relocation>
+                               <relocation>
+                                <pattern>com.codahale</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.codahale</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>io</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.io</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>org.slf4j</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.slf4j</shadedPattern>
+                              </relocation>
+                              <relocation>
+                                <pattern>org.xerial</pattern>
+                                <shadedPattern>com.${env.DRV_BRAND_LOWER}.cassandra.shaded.xerial</shadedPattern>
+                              </relocation>
+                              
+                            </relocations>
+                            
+                            <!-- Filter out thirdparty artifacts. Commented out unless customer needs it.-->
+                            <!-- =================================================================
+                            <filters>
+                                <filter>
+                                  <artifact>*:*</artifact>
+                                  <excludes>
+                                    <exclude>META-INF/services/com.fasterxml.jackson.core.JsonFactory</exclude>
+                                    <exclude>META-INF/services/com.fasterxml.jackson.core.ObjectCodec</exclude>
+                                    <exclude>META-INF/maven/**</exclude>
+                                    <exclude>META-INF/io.netty.versions.properties</exclude>
+                                    <exclude>META-INF/LICENSE</exclude>
+                                    <exclude>META-INF/LICENSE.txt</exclude>
+                                    <exclude>META-INF/NOTICE</exclude>
+                                    <exclude>META-INF/NOTICE.txt</exclude>
+                                    <exclude>META-INF/MANIFEST.MF</exclude>
+                                  </excludes>
+                                </filter>
+                            </filters>
+                            ================================================================= -->
+                            
+                            <!-- Define output directory -->
+                            <outputFile>${env.DRIVER_JAR_PATH}/CassandraJDBC${env.JDBC_V}.jar</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <!-- Replace with the MANIFEST File generated by Ant. Commented out unless customer needs it.-->
+            <!-- =================================================================
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifestFile>${env.DRIVER_JAR_PATH}/branded/extract/MANIFEST.MF</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
+            ================================================================= -->
+        </plugins>
+    </build>
 </project>
