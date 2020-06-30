@@ -136,8 +136,8 @@
             <version>4.0.56.Final</version>
         </dependency>
         <dependency>
-            <groupId>sb_netty-codec</groupId>
-            <artifactId>sb_netty-codec</artifactId>
+            <groupId>netty-codec</groupId>
+            <artifactId>netty-codec</artifactId>
             <version>4.0.56.Final</version>
         </dependency>
         <dependency>
