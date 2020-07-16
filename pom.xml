@@ -12,162 +12,167 @@
     <dependencies>
     
         <dependency>
-            <groupId>sb_asm</groupId>
-            <artifactId>sb_asm</artifactId>
+            <groupId>asm</groupId>
+            <artifactId>asm</artifactId>
             <version>5.0.3</version>
         </dependency>
         <dependency>
-            <groupId>sb_asm-analysis</groupId>
-            <artifactId>sb_asm-analysis</artifactId>
+            <groupId>asm-analysis</groupId>
+            <artifactId>asm-analysis</artifactId>
             <version>5.0.3</version>
         </dependency>      
         <dependency>
-            <groupId>sb_asm-commons</groupId>
-            <artifactId>sb_asm-commons</artifactId>
+            <groupId>asm-commons</groupId>
+            <artifactId>asm-commons</artifactId>
             <version>5.0.3</version>
         </dependency>
         <dependency>
-            <groupId>sb_asm-tree</groupId>
-            <artifactId>sb_asm-tree</artifactId>
+            <groupId>asm-tree</groupId>
+            <artifactId>asm-tree</artifactId>
             <version>5.0.3</version>
         </dependency>
         <dependency>
-            <groupId>sb_asm-util</groupId>
-            <artifactId>sb_asm-util</artifactId>
+            <groupId>asm-util</groupId>
+            <artifactId>asm-util</artifactId>
             <version>5.0.3</version>
         </dependency>
         <dependency>
-            <groupId>sb_cassandra-driver-core</groupId>
-            <artifactId>sb_cassandra-driver-core</artifactId>
+            <groupId>cassandra-driver-core</groupId>
+            <artifactId>cassandra-driver-core</artifactId>
             <version>3.8.0</version>
         </dependency>
         <dependency>
-            <groupId>sb_cassandra-driver-extras</groupId>
-            <artifactId>sb_cassandra-driver-extras</artifactId>
+            <groupId>cassandra-driver-extras</groupId>
+            <artifactId>cassandra-driver-extras</artifactId>
             <version>3.8.0</version>
         </dependency>
         <dependency>
-            <groupId>sb_cassandra-driver-mapping</groupId>
-            <artifactId>sb_cassandra-driver-mapping</artifactId>
+            <groupId>cassandra-driver-mapping</groupId>
+            <artifactId>cassandra-driver-mapping</artifactId>
             <version>3.8.0</version>
         </dependency>       
         <dependency>
-            <groupId>sb_com.google.guava</groupId>
-            <artifactId>sb_guava</artifactId>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
             <!-- 19.0 for support of JDK 1.6: -->
             <!-- 24.1.1-android for support of JDK 1.7: -->
             <!-- 24.1.1-jre for support of JDK 1.8 -->
             <version>24.1.1-jre</version>
         </dependency>
         <dependency>
-            <groupId>sb_HdrHistogram</groupId>
-            <artifactId>sb_HdrHistogram</artifactId>
+            <groupId>HdrHistogram</groupId>
+            <artifactId>HdrHistogram</artifactId>
             <version>2.1.10</version>
         </dependency>
         <dependency>
-            <groupId>sb_jackson-annotations</groupId>
-            <artifactId>sb_jackson-annotations</artifactId>
+            <groupId>jackson-annotations</groupId>
+            <artifactId>jackson-annotations</artifactId>
             <version>2.10.1</version>
         </dependency>
         <dependency>
-            <groupId>sb_jackson-core</groupId>
-            <artifactId>sb_jackson-core</artifactId>
+            <groupId>jackson-core</groupId>
+            <artifactId>jackson-core</artifactId>
             <version>2.10.1</version>
         </dependency>
         <dependency>
-            <groupId>sb_jackson-databind</groupId>
-            <artifactId>sb_jackson-databind</artifactId>
+            <groupId>jackson-databind</groupId>
+            <artifactId>jackson-databind</artifactId>
             <!-- version has to be >= 2.7.9.6 -->
             <version>[2.7.9.6,)</version>
         </dependency>
         <dependency>
-            <groupId>sb_javax.json-api</groupId>
-            <artifactId>sb_javax.json-api</artifactId>
+            <groupId>javax.json-api</groupId>
+            <artifactId>javax.json-api</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>sb_jffi</groupId>
-            <artifactId>sb_jffi</artifactId>
+            <groupId>jffi</groupId>
+            <artifactId>jffi</artifactId>
             <version>1.2.16</version>
         </dependency>
         <dependency>
-            <groupId>sb_jffi-native</groupId>
-            <artifactId>sb_jffi-native</artifactId>
+            <groupId>jffi-native</groupId>
+            <artifactId>jffi-native</artifactId>
             <version>1.2.16</version>
         </dependency>
         <dependency>
-            <groupId>sb_jnr-constants</groupId>
-            <artifactId>sb_jnr-constants</artifactId>
+            <groupId>jnr-constants</groupId>
+            <artifactId>jnr-constants</artifactId>
             <version>0.9.9</version>
         </dependency>
         <dependency>
-            <groupId>sb_jnr-ffi</groupId>
-            <artifactId>sb_jnr-ffi</artifactId>
+            <groupId>jnr-ffi</groupId>
+            <artifactId>jnr-ffi</artifactId>
             <version>2.1.7</version>
         </dependency>
         <dependency>
-            <groupId>sb_jnr-posix</groupId>
-            <artifactId>sb_jnr-posix</artifactId>
+            <groupId>jnr-posix</groupId>
+            <artifactId>jnr-posix</artifactId>
             <version>3.0.44</version>
         </dependency>
         <dependency>
-            <groupId>sb_jnr-x86asm</groupId>
-            <artifactId>sb_jnr-x86asm</artifactId>
+            <groupId>jnr-x86asm</groupId>
+            <artifactId>jnr-x86asm</artifactId>
             <version>1.0.2</version>
         </dependency>
         <dependency>
-            <groupId>sb_joda-time</groupId>
-            <artifactId>sb_joda-time</artifactId>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
             <version>2.9.9</version>
         </dependency>
         <dependency>
-            <groupId>sb_lz4-java</groupId>
-            <artifactId>sb_lz4-java</artifactId>
+            <groupId>lz4-java</groupId>
+            <artifactId>lz4-java</artifactId>
             <version>1.4.1</version>
         </dependency>
         <dependency>
-            <groupId>sb_metrics-core</groupId>
-            <artifactId>sb_metrics-core</artifactId>
+            <groupId>metrics-core</groupId>
+            <artifactId>metrics-core</artifactId>
             <version>3.2.2</version>
         </dependency>
         <dependency>
-            <groupId>sb_netty-buffer</groupId>
-            <artifactId>sb_netty-buffer</artifactId>
-            <version>4.0.56.Final</version>
+            <groupId>netty-buffer</groupId>
+            <artifactId>netty-buffer</artifactId>
+            <version>4.1.50.Final</version>
         </dependency>
         <dependency>
             <groupId>netty-codec</groupId>
             <artifactId>netty-codec</artifactId>
-            <version>4.0.56.Final</version>
+            <version>4.1.50.Final</version>
         </dependency>
         <dependency>
-            <groupId>sb_netty-common</groupId>
-            <artifactId>sb_netty-common</artifactId>
-            <version>4.0.56.Final</version>
+            <groupId>netty-common</groupId>
+            <artifactId>netty-common</artifactId>
+            <version>4.1.50.Final</version>
         </dependency>
         <dependency>
-            <groupId>sb_netty-handler</groupId>
-            <artifactId>sb_netty-handler</artifactId>
-            <version>4.0.56.Final</version>
+            <groupId>netty-handler</groupId>
+            <artifactId>netty-handler</artifactId>
+            <version>4.1.50.Final</version>
         </dependency>
         <dependency>
-            <groupId>sb_netty-transport</groupId>
-            <artifactId>sb_netty-transport</artifactId>
-            <version>4.0.56.Final</version>
+            <groupId>netty-resolver</groupId>
+            <artifactId>netty-resolver</artifactId>
+            <version>4.1.50.Final</version>
         </dependency>
         <dependency>
-            <groupId>sb_slf4j-api</groupId>
-            <artifactId>sb_slf4j-api</artifactId>
+            <groupId>netty-transport</groupId>
+            <artifactId>netty-transport</artifactId>
+            <version>4.1.50.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>slf4j-api</groupId>
+            <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
         </dependency>
         <dependency>
-            <groupId>sb_snappy-java</groupId>
-            <artifactId>sb_snappy-java</artifactId>
+            <groupId>snappy-java</groupId>
+            <artifactId>snappy-java</artifactId>
             <version>1.1.2.6</version>
         </dependency>
         <dependency>
-            <groupId>sb_CassandraJDBC</groupId>
-            <artifactId>sb_CassandraJDBC</artifactId>
+            <groupId>CassandraJDBC</groupId>
+            <artifactId>CassandraJDBC</artifactId>
             <version>${env.MAJOR_V}.${env.MINOR_V}.${env.REVISION_V}.${env.BUILD_V}</version>
         </dependency>
 
