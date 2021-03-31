@@ -56,8 +56,8 @@
             <artifactId>guava</artifactId>
             <!-- 19.0 for support of JDK 1.6: -->
             <!-- 24.1.1-android for support of JDK 1.7: -->
-            <!-- 24.1.1-jre for support of JDK 1.8 -->
-            <version>24.1.1-jre</version>
+            <!-- 29.0-jre for support of JDK 1.8 -->
+            <version>29.0-jre</version>
         </dependency>
         <dependency>
             <groupId>HdrHistogram</groupId>
